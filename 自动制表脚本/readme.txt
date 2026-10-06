@@ -24,5 +24,5 @@ xlsx 约定：
 
 输出：
     每个 sheet 生成一个独立的 .tex 文件，命名为 文件名_sheet编号.tex
-    文件内容为 table 环境片段，供 \\input{} 嵌入主文档
-    导言区需加载：\\usepackage{tabularray}  \\UseTblrLibrary{booktabs, siunitx}
+    文件内容为 table 环境片段，供 \input{} 嵌入主文档
+    导言区需加载：\usepackage{tabularray}  \UseTblrLibrary{booktabs, siunitx}
