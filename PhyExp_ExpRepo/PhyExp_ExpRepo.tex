@@ -1,0 +1,339 @@
+% 为加快编译速度，撰写报告时插入的所有图片都以草稿形式显示，报告写完后把第10行 "\PassOptionsToPackage{draft}{graphicx}" 注释掉，即可恢复图片显示。
+% 实验报告封面通过插入.pdf文件的方式引入，封面的.pdf文件可用Word模板生成。
+% 如在正文中\indent 缩进无效，请尝试写两次\indent，或使用\qquad 缩进。
+% 因为不明原因，在正文中插入浮动体时必须加入[H]参数，如插入图片浮动体应使用\begin{figure}[H]，否则会报错。如果遇到其他浮动体相关的问题无法解决，可以尝试用本模板中提供的透明盒子% 环境手动排版（因为这个透明盒子环境不会自己浮动）。
+% 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一% 个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
+
+% =========================== 导言区开始 =================================
+
+\documentclass[a4paper, zihao=5, UTF8, AutoFakeBold]{ctexart}
+\PassOptionsToPackage{draft}{graphicx}
+
+%% ===== 参考文献 =====
+\usepackage[backend=biber, style=gb7714-2015]{biblatex}
+\addbibresource{references.bib}
+
+%% ===== 排版宏包 =====
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{zhnumber}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularray}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{dblfloatfix}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{derivative}
+\usepackage{xfrac}
+\usepackage{physics2}
+\usephysicsmodule{ab,braket,diagmat,doubleprod}
+\usepackage{romannum}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{adjustbox}
+\usepackage[nameinlink]{cleveref}
+\usepackage{etoolbox}
+\usepackage{tikz}
+
+%% ===== 大框样式 =====
+\tcbset
+{
+    reportbox/.style=
+    {
+        breakable, enhanced,
+        colback  = white,
+        colframe = black,
+        boxrule  = 0.6pt,
+        arc      = 0pt,
+        left = 2pt, right = 3pt,
+        top  = 2pt, bottom = 2pt,
+        boxsep   = 0pt,
+        overlay first={
+            \draw[black, line width=0.6pt]
+                (frame.south west) -- (frame.south east);
+        },
+        overlay middle={
+            \draw[black, line width=0.6pt]
+                (frame.north west) -- (frame.north east);
+            \draw[black, line width=0.6pt]
+                (frame.south west) -- (frame.south east);
+        },
+        overlay last={
+            \draw[black, line width=0.6pt]
+                (frame.north west) -- (frame.north east);
+        },
+    },
+    segmentation style=
+    {
+        solid,
+        draw=black,
+        line width=0.6pt
+    }
+}
+
+%% ===== 正文内容区环境 =====
+\newenvironment{contentarea}
+{
+    \par\vspace{4pt}
+    \leftskip=\cpad\rightskip=\cpad
+    \setlength{\parindent}{2em}
+    \par\vspace{4pt}
+}
+
+%% ===== 内容区左右内边距 =====
+\newlength{\cpad}
+\setlength{\cpad}{5pt}
+
+%% ===== 透明盒子 =====
+\newtcolorbox{transparentbox}{
+    enhanced,
+    frame hidden,
+    interior hidden,
+    boxrule=0pt,
+    boxsep=0pt,
+    left=0pt, right=0pt,
+    top=0pt, bottom=0pt,
+    center,
+}
+
+%% ===== 页面设置 =====
+\geometry{a4paper,top=2.5cm, bottom=1.5cm, left=2cm, right=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}                       
+\fancyfoot[r]{\thepage}          
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%% ===== 行距 段距 栏距 =====
+\setstretch{1.25}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{2em}
+\setlength{\columnsep}{2.5em}
+
+%% ===== 字体设置 =====
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setmathfont{STIX Two Math}
+
+%% ===== 图头、表头格式 =====
+\captionsetup{font=small,format=hang,justification=centering}
+
+%% ===== 自定义字体 =====
+\newcommand{\bfsong}{\songti\zihao{-4}\bfseries}
+
+%% ===== 节标题格式 =====
+\titleformat{\section}[block]{\hspace{5pt}\bfseries\LARGE}{\thesection .\hspace{-4pt}}{0.5em}{}
+\titleformat{\subsection}[block]{\hspace{5pt}\bfseries\Large}{\thesubsection .\hspace{-4pt}}{0.5em}{}
+\titleformat{\subsubsection}[block]{\hspace{5pt}\bfseries\large}{\thesubsubsection .\hspace{-4pt}}{0.5em}{}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+
+%% ===== 自定义节标题 =====
+\newcommand{\secheader}[1]
+{
+    \noindent\hspace{\cpad}{\bfseries #1}
+}
+
+%% ===== 计数器 =====
+\newcounter{thepart}
+
+%% ===== 引用格式 =====
+% 公式编号
+\numberwithin{equation}{thepart}
+\renewcommand{\theequation}{\arabic{thepart}.\arabic{equation}}
+\crefformat{equation}{#2式~(#1)#3}
+\Crefformat{equation}{#2式~(#1)#3}
+
+% 图编号
+\numberwithin{figure}{thepart}
+\renewcommand{\thefigure}{\arabic{thepart}.\arabic{figure}}
+\crefformat{figure}{#2图~#1#3}
+\Crefformat{figure}{#2图~#1#3}
+
+% 表编号
+\numberwithin{table}{thepart}
+\renewcommand{\thetable}{\arabic{thepart}.\arabic{table}}
+\crefformat{table}{#2表~#1#3}
+\Crefformat{table}{#2表~#1#3}
+
+% 章节编号
+\crefformat{section}{#2第#1节#3}
+\Crefformat{section}{#2第#1节#3}
+
+% ===== 记号 =====
+% 矢量
+\newcommand{\vb}[1]{\boldsymbol{#1}}
+\newcommand{\va}[1]{\overrightarrow{#1}}
+
+% 微分
+\newcommand{\ff}{\delta}
+\newcommand{\dd}{\mathrm{d}}
+
+% 算符
+\newcommand{\grad}{\nabla}
+\newcommand{\diver}{\nabla\cdot}
+\newcommand{\curl}{\nabla\times}
+\newcommand{\lapla}{\nabla^2}
+\newcommand{\dAlem}{\Box}
+
+% 单位
+\DeclareSIUnit{\angstrom}{\text{\AA}}
+\sisetup{range-phrase = {\text{～}}}
+
+% =========================== 内容区开始 =================================
+
+\begin{document}
+
+%% =====  封面 =====
+%\includepdf{}
+
+\begin{tcolorbox}[reportbox]
+\par\vspace{4pt}
+
+%% ===== 一、实验目的 =====
+\secheader{一、实验目的}
+\setcounter{thepart}{1}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+%% ===== 二、实验原理 =====
+\vspace{-2pt}
+\secheader{二、实验原理}
+\setcounter{thepart}{2}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+ 
+%% ===== 三、实验仪器 =====
+\vspace{-2pt}
+\secheader{三、实验仪器}
+\setcounter{thepart}{3}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+%% ===== 四、实验内容与步骤 =====
+\vspace{-2pt}
+\secheader{四、实验内容与步骤}
+\setcounter{thepart}{4}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+%% ===== 五、数据处理与分析 =====
+\vspace{-2pt}
+\secheader{五、数据处理与分析}
+\setcounter{thepart}{5}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+%% ===== 六、结果陈述 =====
+\vspace{-2pt}
+\secheader{六、结果陈述}
+\setcounter{thepart}{6}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+%% ===== 七、思考题 =====
+\vspace{-2pt}
+\secheader{七、思考题}
+\setcounter{thepart}{7}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vspace{-8pt}
+\begin{contentarea}
+
+\noindent 示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\示例内容\\
+
+\end{contentarea}
+\tcbline
+
+% ===== 指导教师批阅意见 =====
+\secheader{指导教师批阅意见}
+\vspace{3cm}
+\tcbline
+
+% ===== 成绩评定 =====
+\secheader{成绩评定}
+\vspace{-8pt}
+\begin{table}[H]
+\centering
+\begin{tblr}{|Q[c,m]|Q[c,m]|Q[c,m]|Q[c,m]|Q[c,m]|Q[c,m]|}
+    \hline
+    {预习\\（20分）} & {操作及记录\\（40分）} & {数据处理与分析\\（20分）} & {结果陈述与讨论\\（10分）} & {思考题\\（10分）} & 总分 \\
+    \hline
+    \\
+    \\
+    \hline
+\end{tblr}
+\end{table}
+
+\vspace{1pt}
+\end{tcolorbox}
+
+\end{document}
