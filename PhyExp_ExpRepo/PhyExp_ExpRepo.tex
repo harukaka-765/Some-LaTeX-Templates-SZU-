@@ -2,10 +2,9 @@
 % 实验报告封面通过插入.pdf文件的方式引入，封面的.pdf文件可用Word模板生成。
 % 如在正文中\indent 缩进无效，请尝试写两次\indent，或使用\qquad 缩进。
 % 在tcolorbox环境中浮动体机制会失效，在正文中插入浮动体时必须加入[H]参数，强制浮动体在代码位置插入。如插入图片浮动体应使用\begin{figure}[H]，否则会报错。这相当于放弃了浮动功% % 能，此时的浮动体实质上可以用\begin{minipage}{} 替代，也可以直接用本模板中提供的透明盒子环境替代它。
-% 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
+% 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一% 个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
 
 % =========================== 导言区开始 =================================
-
 \documentclass[a4paper, zihao=5, UTF8, AutoFakeBold]{ctexart}
 \PassOptionsToPackage{draft}{graphicx}
 
@@ -93,10 +92,10 @@
 \setlength{\cpad}{5pt}
 
 %% ===== 透明盒子 =====
-\newtcolorbox{transparentbox}{
+\newtcolorbox{transparentbox}
+{
     enhanced,
-    frame hidden,
-    interior hidden,
+    frame hidden, interior hidden,
     boxrule=0pt,
     boxsep=0pt,
     left=0pt, right=0pt,
@@ -127,9 +126,6 @@
 %% ===== 图头、表头格式 =====
 \captionsetup{font=small,format=hang,justification=centering}
 
-%% ===== 自定义字体 =====
-\newcommand{\bfsong}{\songti\zihao{-4}\bfseries}
-
 %% ===== 节标题格式 =====
 \titleformat{\section}[block]{\hspace{5pt}\bfseries\LARGE}{\thesection .\hspace{-4pt}}{0.5em}{}
 \titleformat{\subsection}[block]{\hspace{5pt}\bfseries\Large}{\thesubsection .\hspace{-4pt}}{0.5em}{}
@@ -144,10 +140,7 @@
 \titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
 
 %% ===== 自定义节标题 =====
-\newcommand{\secheader}[1]
-{
-    \noindent\hspace{\cpad}{\bfseries #1}
-}
+\newcommand{\secheader}[1]{\noindent\hspace{\cpad}{\bfseries #1}}
 
 %% ===== 计数器 =====
 \newcounter{thepart}
@@ -176,7 +169,7 @@
 \Crefformat{section}{#2第#1节#3}
 
 % ===== 记号 =====
-% 矢量
+% 矢量标记
 \newcommand{\vb}[1]{\boldsymbol{#1}}
 \newcommand{\va}[1]{\overrightarrow{#1}}
 
@@ -191,12 +184,11 @@
 \newcommand{\lapla}{\nabla^2}
 \newcommand{\dAlem}{\Box}
 
-% 单位
-\DeclareSIUnit{\angstrom}{\text{\AA}}
+% 数值与单位
 \sisetup{range-phrase = {\text{～}}}
+\DeclareSIUnit{\angstrom}{\text{\AA}}
 
 % =========================== 内容区开始 =================================
-
 \begin{document}
 
 %% =====  封面 =====
