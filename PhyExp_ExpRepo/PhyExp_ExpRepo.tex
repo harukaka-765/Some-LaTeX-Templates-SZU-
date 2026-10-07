@@ -1,8 +1,8 @@
 % 为加快编译速度，撰写报告时插入的所有图片都以草稿形式显示，报告写完后把第10行 "\PassOptionsToPackage{draft}{graphicx}" 注释掉，即可恢复图片显示。
 % 实验报告封面通过插入.pdf文件的方式引入，封面的.pdf文件可用Word模板生成。
 % 如在正文中\indent 缩进无效，请尝试写两次\indent，或使用\qquad 缩进。
-% 因为不明原因，在正文中插入浮动体时必须加入[H]参数，如插入图片浮动体应使用\begin{figure}[H]，否则会报错。如果遇到其他浮动体相关的问题无法解决，可以尝试用本模板中提供的透明盒子% 环境手动排版（因为这个透明盒子环境不会自己浮动）。
-% 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一% 个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
+% 在tcolorbox环境中浮动体机制会失效，在正文中插入浮动体时必须加入[H]参数，强制浮动体在代码位置插入。如插入图片浮动体应使用\begin{figure}[H]，否则会报错。这相当于放弃了浮动功% % 能，此时的浮动体实质上可以用\begin{minipage}{} 替代，也可以直接用本模板中提供的透明盒子环境替代它。
+% 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
 
 % =========================== 导言区开始 =================================
 
@@ -203,11 +203,11 @@
 %\includepdf{}
 
 \begin{tcolorbox}[reportbox]
-\par\vspace{4pt}
 
 %% ===== 一、实验目的 =====
-\secheader{一、实验目的}
 \setcounter{thepart}{1}
+\vspace{1pt}
+\secheader{一、实验目的}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -218,12 +218,12 @@
 \tcbline
 
 %% ===== 二、实验原理 =====
-\vspace{-2pt}
-\secheader{二、实验原理}
 \setcounter{thepart}{2}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{二、实验原理}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -234,12 +234,12 @@
 \tcbline
  
 %% ===== 三、实验仪器 =====
-\vspace{-2pt}
-\secheader{三、实验仪器}
 \setcounter{thepart}{3}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{三、实验仪器}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -250,12 +250,12 @@
 \tcbline
 
 %% ===== 四、实验内容与步骤 =====
-\vspace{-2pt}
-\secheader{四、实验内容与步骤}
 \setcounter{thepart}{4}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{四、实验内容与步骤}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -266,12 +266,12 @@
 \tcbline
 
 %% ===== 五、数据处理与分析 =====
-\vspace{-2pt}
-\secheader{五、数据处理与分析}
 \setcounter{thepart}{5}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{五、数据处理与分析}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -282,12 +282,12 @@
 \tcbline
 
 %% ===== 六、结果陈述 =====
-\vspace{-2pt}
-\secheader{六、结果陈述}
 \setcounter{thepart}{6}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{六、结果陈述}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -298,12 +298,12 @@
 \tcbline
 
 %% ===== 七、思考题 =====
-\vspace{-2pt}
-\secheader{七、思考题}
 \setcounter{thepart}{7}
 \setcounter{section}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\vspace{-2pt}
+\secheader{七、思考题}
 \vspace{-8pt}
 \begin{contentarea}
 
@@ -314,11 +314,13 @@
 \tcbline
 
 % ===== 指导教师批阅意见 =====
+\vspace{-2pt}
 \secheader{指导教师批阅意见}
 \vspace{3cm}
 \tcbline
 
 % ===== 成绩评定 =====
+\vspace{-2pt}
 \secheader{成绩评定}
 \vspace{-8pt}
 \begin{table}[H]
