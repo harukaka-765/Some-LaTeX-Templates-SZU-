@@ -1,38 +1,26 @@
 # Fdb version 4
-["biber Sensor_Paper_Q"] 0 "Sensor_Paper_Q.bcf" "Sensor_Paper_Q.bbl" "Sensor_Paper_Q" 1794301613.64872 0
+["biber Sensor_Paper_Q"] 0 "Sensor_Paper_Q.bcf" "Sensor_Paper_Q.bbl" "Sensor_Paper_Q" 1794322089.7671 0
   "Sensor_Paper_Q.bcf" 0 -1 0 "xelatex"
   "references.bib" 0 -1 0 ""
   (generated)
   "Sensor_Paper_Q.bbl"
   "Sensor_Paper_Q.blg"
   (rewritten before read)
-["xdvipdfmx"] 1794301612.93354 "Sensor_Paper_Q.xdv" "Sensor_Paper_Q.pdf" "Sensor_Paper_Q" 1794301613.66024 0
-  "Sensor_Paper_Q.xdv" 1794301612 49512 c1d255235ee79e127b7e095b4f7c918a "xelatex"
+["xdvipdfmx"] 1794322089.10781 "Sensor_Paper_Q.xdv" "Sensor_Paper_Q.pdf" "Sensor_Paper_Q" 1794322089.77847 0
+  "Sensor_Paper_Q.xdv" 1794322088 48972 a2c75b36af060c280d979326dee395bd "xelatex"
   (generated)
   "Sensor_Paper_Q.pdf"
   (rewritten before read)
-["xelatex"] 1794301609.36407 "e:/Experiments/Sensor/paper_qualify/Sensor_Paper_Q.tex" "Sensor_Paper_Q.xdv" "Sensor_Paper_Q" 1794301613.64903 0
-  "Sensor_Paper_Q.aux" 1794301612 1169 c9c6182412478fd89c38d07a39845282 "xelatex"
+["xelatex"] 1794322085.85943 "e:/LaTeX/templates/Sensor-Paper/paper/Sensor_Paper_Q.tex" "Sensor_Paper_Q.xdv" "Sensor_Paper_Q" 1794322089.76742 0
+  "Sensor_Paper_Q.aux" 1794322088 1009 d261e76ab1231497c18317953a8b3440 "xelatex"
   "Sensor_Paper_Q.bbl" 0 -1 0 "biber Sensor_Paper_Q"
-  "Sensor_Paper_Q.out" 1794301612 608 a4f1528e0218a04df227313a80b12ab7 "xelatex"
-  "Sensor_Paper_Q.run.xml" 1794301612 2521 22c226413243c8d1d2c356870fbd88ee "xelatex"
-  "Sensor_Paper_Q.tex" 1794301608 11486 56580674224872f13ec507c6b0694cc3 ""
+  "Sensor_Paper_Q.out" 1794322088 608 a4f1528e0218a04df227313a80b12ab7 "xelatex"
+  "Sensor_Paper_Q.run.xml" 1794322088 2521 22c226413243c8d1d2c356870fbd88ee "xelatex"
+  "Sensor_Paper_Q.tex" 1794322081 11598 ddd53cb0e7c71f20c481a6736085af7f ""
   "c:/Windows/Fonts/msyh.ttc" 1739043317 19704352 1e10e74402e59d54499af795caf0b135 ""
-  "e:/Experiments/Sensor/paper_qualify/Sensor_Paper_Q.tex" 1794301608 11486 56580674224872f13ec507c6b0694cc3 ""
+  "e:/LaTeX/templates/Sensor-Paper/paper/Sensor_Paper_Q.tex" 1794322081 11598 ddd53cb0e7c71f20c481a6736085af7f ""
   "e:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780922755 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "e:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1780924729 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1780922015 1120 1e8878807317373affa7f7bba4cf2f6a ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1780922015 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm" 1780922015 1496 c79f6914c6d39ffb3759967363d1be79 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm" 1780922015 1508 6e807ff901c35a5f1fde0ca275533df8 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1780922346 1116 4e6ba9d7914baa6482fd69f67d126380 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1780922346 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1780922346 1332 f817c21a1ba54560425663374f1b651a ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1780922346 1336 3125ccb448c1a09074e3aa4a9832f130 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1780922346 1528 abec98dbc43e172678c11b3b9031252a ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm" 1780922346 1508 c4419b1e413bcd6205bf37867d782a47 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm" 1780922346 1528 e2423ae06dc7dee599cceb79d1c9dc32 ""
-  "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm" 1780922346 1524 554068197b70979a55370e6c6495f441 ""
   "e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1780922346 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "e:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1780922212 40635 c40361e206be584d448876bba8a64a3b ""
   "e:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty" 1780922218 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""

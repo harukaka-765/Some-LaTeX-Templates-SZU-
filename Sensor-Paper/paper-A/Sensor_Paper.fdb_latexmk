@@ -1,24 +1,24 @@
 # Fdb version 4
-["biber Sensor_Paper"] 1794299819.81753 "Sensor_Paper.bcf" "Sensor_Paper.bbl" "Sensor_Paper" 1794301774.02781 0
-  "Sensor_Paper.bcf" 1794301773 137485 e0ef10c459040395321a11c80f6d31d1 "xelatex"
+["biber Sensor_Paper"] 1794299819.81753 "Sensor_Paper.bcf" "Sensor_Paper.bbl" "Sensor_Paper" 1794322035.06345 0
+  "Sensor_Paper.bcf" 1794322034 137485 e0ef10c459040395321a11c80f6d31d1 "xelatex"
   "references.bib" 1794231971 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "Sensor_Paper.bbl"
   "Sensor_Paper.blg"
   (rewritten before read)
-["xdvipdfmx"] 1794301773.38058 "Sensor_Paper.xdv" "Sensor_Paper.pdf" "Sensor_Paper" 1794301774.04077 0
-  "Sensor_Paper.xdv" 1794301773 49520 719608a790515b63fdabb31969adb153 "xelatex"
+["xdvipdfmx"] 1794322034.37113 "Sensor_Paper.xdv" "Sensor_Paper.pdf" "Sensor_Paper" 1794322035.07511 0
+  "Sensor_Paper.xdv" 1794322034 49588 5b75b5117e61e604b7322b41591509c9 "xelatex"
   (generated)
   "Sensor_Paper.pdf"
   (rewritten before read)
-["xelatex"] 1794301770.3373 "e:/Experiments/Sensor/paper/Sensor_Paper.tex" "Sensor_Paper.xdv" "Sensor_Paper" 1794301774.02811 0
-  "Sensor_Paper.aux" 1794301773 1192 27729609251218b58abb389b1c85b22e "xelatex"
+["xelatex"] 1794322031.20637 "e:/LaTeX/templates/Sensor-Paper/paper-A/Sensor_Paper.tex" "Sensor_Paper.xdv" "Sensor_Paper" 1794322035.06374 0
+  "Sensor_Paper.aux" 1794322034 1191 d33af30c278aad55aaf3a3eaabf000dd "xelatex"
   "Sensor_Paper.bbl" 1794299821 486 76d65a242ec496c9b4361af646ff12cb "biber Sensor_Paper"
-  "Sensor_Paper.out" 1794301773 608 a4f1528e0218a04df227313a80b12ab7 "xelatex"
-  "Sensor_Paper.run.xml" 1794301773 2507 3218e67d634464c6a12de20952736816 "xelatex"
-  "Sensor_Paper.tex" 1794301769 11508 0dcdaab9c8976902e98c81f10f0ab469 ""
+  "Sensor_Paper.out" 1794322034 608 a4f1528e0218a04df227313a80b12ab7 "xelatex"
+  "Sensor_Paper.run.xml" 1794322034 2507 3218e67d634464c6a12de20952736816 "xelatex"
+  "Sensor_Paper.tex" 1794322027 11526 68d8f6e67237f6c285894120cffacf14 ""
   "c:/Windows/Fonts/msyh.ttc" 1739043317 19704352 1e10e74402e59d54499af795caf0b135 ""
-  "e:/Experiments/Sensor/paper/Sensor_Paper.tex" 1794301769 11508 0dcdaab9c8976902e98c81f10f0ab469 ""
+  "e:/LaTeX/templates/Sensor-Paper/paper-A/Sensor_Paper.tex" 1794322027 11526 68d8f6e67237f6c285894120cffacf14 ""
   "e:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780922755 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "e:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1780924729 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "e:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1780922015 1120 1e8878807317373affa7f7bba4cf2f6a ""
