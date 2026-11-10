@@ -5,7 +5,7 @@
 % 本模板会在实验报告的首页底部、尾页顶部、中间页顶部和底部自动补画框线，有时会出现章节分隔线和页面框线重复的问题。此时请删除对应章节末尾画出章节分隔线的指令，并人为在章节末尾插入一% 个透明盒子环境，环境中写一个小垂直空格，如\vspace{1pt}，将下一章节的标题挤到下一页去，即可手动解决双框线问题。
 
 % =========================== 导言区开始 =================================
-\documentclass[a4paper, zihao=5, UTF8, AutoFakeBold]{ctexart}
+\documentclass[a4paper, zihao=5, UTF8, AutoFakeBold, AutoFakeSlant]{ctexart}
 \PassOptionsToPackage{draft}{graphicx}
 
 %% ===== 参考文献 =====
@@ -29,6 +29,7 @@
 \usepackage{siunitx}
 \usepackage{mathtools}
 \usepackage{unicode-math}
+\usepackage{bm}
 \usepackage{derivative}
 \usepackage{xfrac}
 \usepackage{physics2}
@@ -38,9 +39,11 @@
 \usepackage{xcolor}
 \usepackage{diagbox}
 \usepackage{adjustbox}
+\usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
 \usepackage{etoolbox}
 \usepackage{tikz}
+\usepackage{xparse}
 
 %% ===== 大框样式 =====
 \tcbset
@@ -174,8 +177,8 @@
 \newcommand{\va}[1]{\overrightarrow{#1}}
 
 % 微分
-\newcommand{\ff}{\delta}
 \newcommand{\dd}{\mathrm{d}}
+\newcommand{\ff}{\delta}
 
 % 算符
 \newcommand{\grad}{\nabla}

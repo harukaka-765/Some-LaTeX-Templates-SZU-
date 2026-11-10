@@ -1,0 +1,3 @@
+PWD E:/Experiments/Sensor/paper
+INPUT e:/texlive/2026/texmf-var/web2c/luahbtex/lualatex.fmt
+INPUT ./Sensor_Paper.tex
